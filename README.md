@@ -64,13 +64,13 @@ To make these macros available in your specs, do the following:
 
     group :test do
       ...
-      gem 'rspec_random', '~> 0.0.1'
+      gem 'specstar-support-random', '~> 0.0.1'
       ...
     end
 
 **spec/spec_helper.rb**
 
-    require 'rspec_random'
+    require 'specstar/support/random'
     ...
 
 
