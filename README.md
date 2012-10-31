@@ -34,6 +34,21 @@ Example:
       end
     end
 
+**`random_domain`**
+
+Example:
+
+    describe 'browser' do
+      it 'should resolve the specified domain.' do
+        domain = random_domain
+        browser(domain)
+        agent.should have_received(:resolve).with(domain)
+      end
+    end
+
+**`random_query`**
+
+
 **`random_url`**
 
 Example:
