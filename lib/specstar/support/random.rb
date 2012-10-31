@@ -20,12 +20,32 @@ def random_time
   Time.at rand Time.now.to_i
 end
 
-def random_url
+def random_domain
   tld = ["com", "org", "net", "biz", "info", "co", "co.in"].sample
-  domain = (0..rand(3)).map { random_text.downcase }.join(".")
+  domain = (0..rand(3)).map { random_text(:max_length => 12).downcase }.join(".")
   scheme = ["http", "https"].sample
 
   "#{scheme}://#{domain}.#{tld}"
+end
+
+def random_query
+  params = {}
+
+  (0..rand(10)).each { params[random_text :max_length => 8] = random_text }
+  
+  params.to_param
+end
+
+def random_url(options={})
+  uri = if options.include? :domain
+          URI("#{['http', 'https'].sample}://#{options.delete(:domain)}")
+	else
+	  URI(random_domain)
+        end
+  uri.path = "/#{random_text.downcase}"
+  uri.query = random_query
+
+  uri.to_s
 end
 
 def random_exception
