@@ -1,3 +1,6 @@
+# 0.0.4
+  * Bug: random_url should not use specified domain if it is nil.
+
 # 0.0.3
   * Bug: random_domain should return a domain, not a url.
 
