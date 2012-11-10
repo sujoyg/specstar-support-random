@@ -23,9 +23,8 @@ end
 def random_domain
   tld = ["com", "org", "net", "biz", "info", "co", "co.in"].sample
   domain = (0..rand(3)).map { random_text(:max_length => 12).downcase }.join(".")
-  scheme = ["http", "https"].sample
 
-  "#{scheme}://#{domain}.#{tld}"
+  "#{domain}.#{tld}"
 end
 
 def random_query
