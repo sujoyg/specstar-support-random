@@ -1,3 +1,6 @@
+# 0.0.3
+  * Bug: random_domain should return a domain, not a url.
+
 # 0.0.2
   * Feature: Adding random_domain and random_query for helping test URL handling code.
 
