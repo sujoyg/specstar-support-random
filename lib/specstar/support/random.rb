@@ -36,11 +36,9 @@ def random_query
 end
 
 def random_url(options={})
-  uri = if options[:domain]
-          URI("#{['http', 'https'].sample}://#{options.delete(:domain)}")
-	else
-	  URI(random_domain)
-        end
+  domain = options.delete(:domain) || random_domain
+
+  uri = URI("#{['http', 'https'].sample}://#{domain}")
   uri.path = "/#{random_text.downcase}"
   uri.query = random_query
 
