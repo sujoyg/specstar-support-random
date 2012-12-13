@@ -47,7 +47,7 @@ end
 
 def random_exception
   begin
-    raise random_string
+    raise random_text
   rescue => e
     e
   end
