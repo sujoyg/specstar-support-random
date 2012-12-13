@@ -1,3 +1,6 @@
+# 0.0.6
+  * Bug: random_exception was throwing an exception.
+
 # 0.0.5
   * Bug: Fix generation of random_url.
 
