@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'specstar-support-random'
-  s.version     = '0.0.6'
+  s.version     = '0.0.7'
   s.date        = Time.now.to_date
   s.summary     = 'RSpec helpers for generating random entities.'
   s.authors     = ['Sujoy Gupta']

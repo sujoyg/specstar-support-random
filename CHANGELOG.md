@@ -1,3 +1,6 @@
+# 0.0.7
+  * Feature: random_url allows specifying scheme and fragment.
+
 # 0.0.6
   * Bug: random_exception was throwing an exception.
 
