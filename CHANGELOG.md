@@ -1,3 +1,6 @@
+# 0.0.8
+  * Bug: Respect params to random_url being nil.
+
 # 0.0.7
   * Feature: random_url allows specifying scheme and fragment.
 

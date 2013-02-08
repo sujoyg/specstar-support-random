@@ -36,9 +36,9 @@ def random_query
 end
 
 def random_url(options={})
-  domain = options.delete(:domain) || random_domain
-  scheme = options.delete(:scheme) || ['http', 'https'].sample
-  fragment = options.delete(:fragment) || random_text
+  domain = options.include?(:domain) ? options[:domain] : random_domain
+  scheme = options.include?(:scheme) ? options[:scheme] : ['http', 'https'].sample
+  fragment = options.include?(:fragment) ? options[:fragment] : random_text
 
   uri = URI("#{scheme}://#{domain}")
   uri.path = "/#{random_text.downcase}"
