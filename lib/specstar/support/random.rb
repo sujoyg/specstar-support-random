@@ -1,5 +1,35 @@
+def random_domain
+  tld = ["com", "org", "net", "biz", "info", "co", "co.in"].sample
+  domain = (0..rand(3)).map { random_text(:max_length => 12).downcase }.join(".")
+
+  "#{domain}.#{tld}"
+end
+
 def random_email
   "#{random_text}@#{random_text}.com".downcase
+end
+
+def random_exception
+  begin
+    raise random_text
+  rescue => e
+    e
+  end
+end
+
+def random_hash(options={})
+  hash = {}
+  elements = options[:length] || 1 + rand(options[:max_length] || 10)
+  elements.times { hash[random_text.to_sym] = random_text }
+  hash
+end
+
+def random_query
+  params = {}
+
+  (0..rand(10)).each { params[random_text :max_length => 8] = random_text }
+  
+  params.to_param
 end
 
 def random_text(options={})
@@ -20,21 +50,6 @@ def random_time
   Time.at rand Time.now.to_i
 end
 
-def random_domain
-  tld = ["com", "org", "net", "biz", "info", "co", "co.in"].sample
-  domain = (0..rand(3)).map { random_text(:max_length => 12).downcase }.join(".")
-
-  "#{domain}.#{tld}"
-end
-
-def random_query
-  params = {}
-
-  (0..rand(10)).each { params[random_text :max_length => 8] = random_text }
-  
-  params.to_param
-end
-
 def random_url(options={})
   domain = options.include?(:domain) ? options[:domain] : random_domain
   scheme = options.include?(:scheme) ? options[:scheme] : ['http', 'https'].sample
@@ -48,10 +63,3 @@ def random_url(options={})
   uri.to_s
 end
 
-def random_exception
-  begin
-    raise random_text
-  rescue => e
-    e
-  end
-end

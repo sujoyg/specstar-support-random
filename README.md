@@ -72,6 +72,17 @@ Example:
       end
     end
 
+**`random_hash`**
+
+Example:
+
+    describe 'backtrace' do
+      it 'should stringify keys." do
+        hash = random_hash.symbolize_keys
+       	stringify(hash).should == hash.stringify_keys
+      end
+    end
+
 
 To make these macros available in your specs, do the following:
 
