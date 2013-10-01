@@ -1,3 +1,6 @@
+# 0.1.0
+  * Feature: Adding random_number.
+
 # 0.0.8
   * Bug: Respect params to random_url being nil.
 

@@ -24,6 +24,15 @@ def random_hash(options={})
   hash
 end
 
+def random_number(options={})
+  output = nil
+  while output.nil? || output == options[:except]
+    output = rand(options[:max] || 1e9)
+  end
+
+  output
+end
+
 def random_query
   params = {}
 

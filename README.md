@@ -46,6 +46,14 @@ Example:
       end
     end
 
+**`random_number`**
+
+Example:
+
+   random_number - Produces a random number between 0 and 1e9.
+   random_number(max: 1000) - Produces a random number between 0 and 1000.
+   random_number(max: 10, except: 5) - Produces a random number between 0 and 10 except 5.
+
 **`random_query`**
 
 
