@@ -1,6 +1,7 @@
 This package provides useful macros for generating random objects for testing.
-
-**`random_text`**
+Matchers
+--------
+**random_text**
 
 Example:
 
@@ -11,7 +12,7 @@ Example:
       end
     end
 
-**`random_email`**
+**random_email**
 
 Example:
 
@@ -23,7 +24,7 @@ Example:
       end
     end
 
-**`random_time`**
+**random_time**
 
 Example:
 
@@ -34,7 +35,7 @@ Example:
       end
     end
 
-**`random_domain`**
+**random_domain**
 
 Example:
 
@@ -46,7 +47,7 @@ Example:
       end
     end
 
-**`random_number`**
+**random_number**
 
 Example:
 
@@ -54,10 +55,11 @@ Example:
    random_number(max: 1000) - Produces a random number between 0 and 1000.
    random_number(max: 10, except: 5) - Produces a random number between 0 and 10 except 5.
 
-**`random_query`**
+**random_query**
 
+Generates a random query parameter of a URL.
 
-**`random_url`**
+**random_url**
 
 Example:
 
@@ -69,7 +71,7 @@ Example:
       end
     end
 
-**`random_exception`**
+**random_exception**
 
 Example:
 
@@ -80,7 +82,7 @@ Example:
       end
     end
 
-**`random_hash`**
+**random_hash**
 
 Example:
 
@@ -91,7 +93,8 @@ Example:
       end
     end
 
-
+Using
+-----
 To make these macros available in your specs, do the following:
 
 **Gemfile**
@@ -107,4 +110,12 @@ To make these macros available in your specs, do the following:
     require 'specstar/support/random'
     ...
 
+Related Tools
+-------------
+You may also want to consider the following gems to help with your specs:
+ 
+* **specstar-controllers**: Matchers for checking that the filters and layouts in a controller have been defined correctly. Learn more [here](https://github.com/sujoyg/specstar-controllers 'Github').
+All released gems are [here](http://rubygems.org/gems/specstar-controllers).
+* **specstar-models**: Matchers for checking that the attributes, validations and associations of a model have been defined correctly.  Learn more [here](https://github.com/sujoyg/specstar-models 'Github'). All released gems are [here](http://rubygems.org/gems/specstar-models).
 
+ 
