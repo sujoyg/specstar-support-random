@@ -7,4 +7,5 @@ Gem::Specification.new do |s|
   s.email       = 'sujoyg@gmail.com'
   s.files       = ['lib/specstar/support/random.rb']
   s.homepage    = 'http://github.com/sujoyg/specstar-support-random'
+  s.license     = 'MIT'
 end
