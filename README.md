@@ -61,11 +61,13 @@ Generates a random query parameter of a URL.
 
 **random_url**
 
+Generates a random URL. You can override the domain, scheme, fragment or query to be nil or a specific value.
+
 Example:
 
     describe 'crawl' do
       it 'should download the specified url.' do
-        url = random_url
+        url = random_url(fragment: nil, query: 'foo=bar')
         crawl(url)
         agent.should have_received(:get).with(url)
       end
