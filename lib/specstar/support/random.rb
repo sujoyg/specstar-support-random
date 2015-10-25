@@ -50,9 +50,10 @@ def random_text(options={})
              1 + rand(32)
            end
 
-  chars = ("A".."Z").to_a + ("a".."z").to_a + ("0".."9").to_a
+  alpha_chars = ("A".."Z").to_a + ("a".."z").to_a
+  chars = alpha_chars + ("0".."9").to_a
 
-  (1..length).map { chars.sample }.join("")
+  ([alpha_chars.sample] + (2..length).map { chars.sample }).shuffle.join("")
 end
 
 def random_time

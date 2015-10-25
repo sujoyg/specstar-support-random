@@ -1,3 +1,6 @@
+# 0.1.2
+  * Feature: random_text should always contain at least one letter.
+
 # 0.1.1
   * Feature: random_url allows specification of query.
 
