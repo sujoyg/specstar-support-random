@@ -1,3 +1,6 @@
+# 0.1.3
+  * Feature: Adding random_hexadecimal.
+
 # 0.1.2
   * Feature: random_text should always contain at least one letter.
 

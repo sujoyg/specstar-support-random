@@ -24,6 +24,22 @@ def random_hash(options={})
   hash
 end
 
+
+def random_hexadecimal(options={})
+  length = if options[:length]
+             options[:length]
+           elsif options[:max_length]
+             1 + rand(options[:max_length])
+           elsif options[:min_length]
+             options[:min_length] + rand(64)
+	   else
+	     1 + rand(64)
+           end
+
+  (1..length).map { '0123456789abcdef'.chars.sample }.join
+end
+
+
 def random_number(options={})
   output = nil
   while output.nil? || output == options[:except]

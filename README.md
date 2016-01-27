@@ -47,6 +47,37 @@ Example:
       end
     end
 
+**random_exception**
+
+Example:
+
+    describe 'backtrace' do
+      it 'should print the backtrace of the given exception.' do
+        exception = random_exception
+        backtrace(exception).should == exception.backtrace.join("\n")
+      end
+    end
+
+**random_hash**
+
+Example:
+
+    describe 'backtrace' do
+      it 'should stringify keys." do
+        hash = random_hash.symbolize_keys
+       	stringify(hash).should == hash.stringify_keys
+      end
+    end
+
+**random_hexadecimal**
+
+Example:
+
+   random_hexadecimal - Produces a random string of up to 64 hexadecimal characters.
+   random_number(max_length: 1000) - Produces a random string of up to 1000 hexadecimal characters.
+   random_number(min_length: 10) - Produces a random string of at least 10 hexadecimal characters.
+   random_number(length: 32) - Produces a random string of exactly 32 hexadecimal characters.
+
 **random_number**
 
 Example:
@@ -73,28 +104,6 @@ Example:
       end
     end
 
-**random_exception**
-
-Example:
-
-    describe 'backtrace' do
-      it 'should print the backtrace of the given exception.' do
-        exception = random_exception
-        backtrace(exception).should == exception.backtrace.join("\n")
-      end
-    end
-
-**random_hash**
-
-Example:
-
-    describe 'backtrace' do
-      it 'should stringify keys." do
-        hash = random_hash.symbolize_keys
-       	stringify(hash).should == hash.stringify_keys
-      end
-    end
-
 Using
 -----
 To make these macros available in your specs, do the following:
@@ -103,7 +112,7 @@ To make these macros available in your specs, do the following:
 
     group :test do
       ...
-      gem 'specstar-support-random', '~> 0.0.1'
+      gem 'specstar-support-random'
       ...
     end
 
