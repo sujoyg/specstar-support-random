@@ -35,6 +35,18 @@ Example:
       end
     end
 
+
+**random_date**
+
+Example:
+
+    describe 'record_date' do
+      it 'should return the date 3 days before the given date.' do
+        release_date = random_date
+        record_date(release_date).should == release_date - 3.days
+      end
+    end
+
 **random_domain**
 
 Example:

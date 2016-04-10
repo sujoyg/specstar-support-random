@@ -1,3 +1,6 @@
+# 0.1.4
+  * Feature: Adding random_date.
+
 # 0.1.3
   * Feature: Adding random_hexadecimal.
 

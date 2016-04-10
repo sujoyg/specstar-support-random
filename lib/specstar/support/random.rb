@@ -76,6 +76,10 @@ def random_time
   Time.at rand Time.now.to_i
 end
 
+def random_date
+  random_time.to_date
+end
+
 def random_url(options={})
   domain = options.include?(:domain) ? options[:domain] : random_domain
   scheme = options.include?(:scheme) ? options[:scheme] : ['http', 'https'].sample
